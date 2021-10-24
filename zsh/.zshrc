@@ -113,3 +113,7 @@ _fzf_comprun() {
 ##### Utilities #####
 
 alias cdp='source ~/.local/share/utils/cdp'
+
+##### Local Configuration #####
+
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
