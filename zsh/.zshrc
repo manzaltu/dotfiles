@@ -31,3 +31,8 @@ zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
+
+# Completion menu style
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
+    'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' menu select
