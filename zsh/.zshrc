@@ -44,3 +44,11 @@ autoload -Uz run-help
 alias help=run-help
 
 autoload -Uz run-help-git run-help-ip run-help-openssl run-help-p4 run-help-sudo run-help-svk run-help-svn
+
+##### Colors #####
+
+autoload -U colors
+colors
+
+export CLICOLOR=1 # enable colored output from ls, etc
+export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
