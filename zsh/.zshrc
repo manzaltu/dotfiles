@@ -73,7 +73,8 @@ export RPS1='%D{%T}'
 # Based on instructions found here https://github.com/junegunn/fzf/blob/master/README.md
 
 # FZF mappings and options
-[ -f /usr/share/fzf/shell/key-bindings.zsh ] && source /usr/share/fzf/shell/key-bindings.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh ||
+{ [ -f /usr/share/fzf/shell/key-bindings.zsh ] && source /usr/share/fzf/shell/key-bindings.zsh }
 
 # Use ~~ as the trigger sequence instead of the default **
 export FZF_COMPLETION_TRIGGER='~~'
