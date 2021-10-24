@@ -1,0 +1,31 @@
+* Dot Files
+
+A collection of dot files.
+
+** Installation
+#+BEGIN_SRC shell
+git clone https://github.com/manzaltu/dotfiles .dotfiles
+#+END_SRC
+
+** Getting updates
+You can update the configuration by running the following command inside the
+cloned dir:
+#+BEGIN_SRC shell
+git pull -r
+#+END_SRC
+
+** LICENSE
+Copyright © 2021 Yoav Orot.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
