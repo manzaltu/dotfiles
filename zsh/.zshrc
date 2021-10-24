@@ -109,3 +109,7 @@ _fzf_comprun() {
     *)            fzf "$@" ;;
   esac
 }
+
+##### Utilities #####
+
+alias cdp='source ~/.local/share/utils/cdp'
