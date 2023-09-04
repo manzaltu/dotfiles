@@ -1,0 +1,3 @@
+##### General Options #####
+
+bindkey -e
