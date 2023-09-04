@@ -24,3 +24,10 @@ setopt inc_append_history
 HISTFILE=~/.history
 HISTSIZE=1000000000
 SAVEHIST=$HISTSIZE
+
+##### Auto Completion #####
+
+zstyle :compinstall filename "$HOME/.zshrc"
+
+autoload -Uz compinit
+compinit
