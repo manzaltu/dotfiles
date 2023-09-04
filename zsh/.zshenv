@@ -18,3 +18,7 @@ fi
 ##### Env Vars #####
 
 PATH="$HOME/.local/bin:$PATH"
+
+##### Local Configuration #####
+
+[[ -f ~/.zshenv.local ]] && source ~/.zshenv.local
