@@ -2,6 +2,10 @@
 
 A collection of dot files.
 
+** Dependencies
+You should have the following software installed:
+1. [[https://github.com/junegunn/fzf][FZF]] - Command line fuzzy finder
+
 ** Installation
 #+BEGIN_SRC shell
 git clone https://github.com/manzaltu/dotfiles .dotfiles
