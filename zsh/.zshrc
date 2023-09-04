@@ -52,3 +52,18 @@ colors
 
 export CLICOLOR=1 # enable colored output from ls, etc
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+
+##### Prompt #####
+
+setopt prompt_subst
+
+# Adds the current branch name in green
+git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null)
+  if [[ -n $ref ]]; then
+    echo "(%{$fg_bold[green]%}${ref#refs/heads/}%{$reset_color%})"
+  fi
+}
+
+export PS1='[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%2~%{$reset_color%}]$(git_prompt_info) '
+export RPS1='%D{%T}'
