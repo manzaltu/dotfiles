@@ -5,6 +5,8 @@ A collection of dot files.
 ** Installation
 #+BEGIN_SRC shell
 git clone https://github.com/manzaltu/dotfiles .dotfiles
+cd .dotfiles
+stow zsh
 #+END_SRC
 
 ** Getting updates
