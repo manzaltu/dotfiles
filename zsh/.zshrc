@@ -131,3 +131,6 @@ vterm_printf() {
 ##### Local Configuration #####
 
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+##### direnv #####
+eval "$(direnv hook zsh)"
