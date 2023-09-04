@@ -13,3 +13,14 @@ export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 setopt autopushd pushdminus pushdsilent pushdtohome
 export dirstacksize=10
 alias dh='dirs -v'
+
+##### History #####
+
+setopt extended_history
+setopt no_share_history
+unsetopt share_history
+setopt inc_append_history
+
+HISTFILE=~/.history
+HISTSIZE=1000000000
+SAVEHIST=$HISTSIZE
