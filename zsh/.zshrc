@@ -67,6 +67,14 @@ git_prompt_info() {
 
 export PS1='[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%2~%{$reset_color%}]$(git_prompt_info) '
 
+##### Emacs Dir Tracking #####
+
+if [ -n "$INSIDE_EMACS" ]; then
+    chpwd() { print -P "\033AnSiTc %d" }
+    print -P "\033AnSiTu %n"
+    print -P "\033AnSiTc %d"
+fi
+
 ##### FZF #####
 
 # Based on instructions found here https://github.com/junegunn/fzf/blob/master/README.md
