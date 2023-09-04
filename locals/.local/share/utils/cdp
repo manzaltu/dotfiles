@@ -1,0 +1,35 @@
+# Should be called using source, e.g., alias cdp='source cdp'
+
+# Run in a subshell, so we won't pollute our shell environment
+function _CHECK_PROJECT() (
+    PROJECT_ROOT_ROOT_FILES=".projectile .project Cargo.toml Gemfile requirements.txt setup.py package.json"
+    PROJECT_ROOT_DIRECTORIES=".git"
+    PROJECT_DIRECTORIES="projects"
+
+    for ROOT_FILE in "$PROJECT_ROOT_ROOT_FILES"; do
+        if [[ -f "$ROOT_FILE" ]]; then
+            return 0
+        fi
+    done
+
+    for ROOT_DIRECTORY in "$PROJECT_ROOT_DIRECTORIES"; do
+        if [[ -d "$ROOT_DIRECTORY" ]]; then
+            return 0
+        fi
+    done
+
+    CURRENT_DIR=${PWD##*/}
+
+    for PROJECT_DIRECTORY in "$PROJECT_DIRECTORIES"; do
+        if [[ "$CURRENT_DIR" == "$PROJECT_DIRECTORY" ]]; then
+            return 0
+        fi
+    done
+
+    return 1
+)
+
+while [[ "$PWD" != "/" ]]; do
+    _CHECK_PROJECT && break
+    cd ..
+done
