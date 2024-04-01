@@ -9,6 +9,8 @@ export VISUAL='emacsclient'
 export EDITOR=$VISUAL
 alias ec='emacsclient -n'
 
+export LSP_USE_PLISTS=true
+
 ##### Cargo Setup #####
 
 if [ -r "$HOME/.cargo/env" ]; then
