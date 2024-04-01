@@ -141,3 +141,11 @@ vterm_printf() {
 
 ##### direnv #####
 eval "$(direnv hook zsh)"
+
+##### VTerm (end) #####
+
+vterm_prompt_end() {
+    vterm_printf "51;A$(whoami)@$(hostname):$(pwd)"
+}
+setopt PROMPT_SUBST
+PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
