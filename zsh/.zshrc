@@ -137,6 +137,9 @@ vterm_printf() {
     fi
 }
 
+# Bind DEL key to delete-char to make `vterm-send-delete` work
+bindkey "\e[3~" delete-char
+
 ##### Eat #####
 
 [ -n "$EAT_SHELL_INTEGRATION_DIR" ] && \
