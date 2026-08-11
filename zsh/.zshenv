@@ -8,6 +8,7 @@ export LANG=en_US.UTF-8
 export VISUAL='emacsclient'
 export EDITOR=$VISUAL
 alias ec='emacsclient -n'
+alias et="emacsclient -t -a ''"
 
 export LSP_USE_PLISTS=true
 
