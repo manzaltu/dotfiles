@@ -57,15 +57,9 @@ export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 
 setopt prompt_subst
 
-# Adds the current branch name or commit ID in green
-git_prompt_info() {
-  ref=$(git symbolic-ref -q --short HEAD 2> /dev/null || git rev-parse --short HEAD 2> /dev/null)
-  if [[ -n $ref ]]; then
-    echo "(%{$fg_bold[green]%}${ref}%{$reset_color%})"
-  fi
-}
-
-export PS1='[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%2~%{$reset_color%}]$(git_prompt_info) '
+# Shows the time and the current directory, and ends with % (or # as root),
+# colored red when the last command failed (same colors as the eshell prompt)
+export PS1='%B%F{139}[%D{%H:%M:%S}]%f ${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%F{37}%1~%f %(?.%F{67}.%F{167})%#%f%b '
 
 ##### Emacs Dir Tracking #####
 
